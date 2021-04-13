@@ -1,0 +1,60 @@
+{
+  "total_amount": 29000,
+  "set_total_percent": 80,
+  "stocks": {
+    "202101": {
+      "name": "南方宝元债券A",
+      "role": "guard",
+      "now": 3065.09,
+      "set_percent": 25
+    },
+    "270002": {
+      "name": "广发稳健增长A",
+      "role": "guard",
+      "now": 2054.78,
+      "set_percent": 15
+    },
+    "16017": {
+      "name": "富国中证500指数增强(LOF)",
+      "role": "central-forward",
+      "now": 611.87,
+      "set_percent": 5
+    },
+    "005827": {
+      "name": "易方达蓝筹精选混合",
+      "role": "central-forward",
+      "now": 2851.16,
+      "set_percent": 20
+    },
+    "166002": {
+      "name": "中欧新蓝筹灵活配置混合A",
+      "role": "central-forward",
+      "now": 1160.31,
+      "set_percent": 10
+    },
+    "519006": {
+      "name": "汇添富蓝筹稳健混合",
+      "role": "central-forward",
+      "now": 797.94,
+      "set_percent": 0
+    },
+    "000751": {
+      "name": "嘉实新兴产业股票",
+      "role": "forward",
+      "now": 2644.44,
+      "set_percent": 20
+    },
+    "001875": {
+      "name": "前海开源沪港深优势精选灵活配置混合A",
+      "role": "forward",
+      "now": 300.65,
+      "set_percent": 0
+    },
+    "006257": {
+      "name": "信达澳银先进制造股票",
+      "role": "forward",
+      "now": 5141.91,
+      "set_percent": 20
+    }
+  }
+}
