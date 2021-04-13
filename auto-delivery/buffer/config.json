@@ -1,6 +1,7 @@
 {
   "total_amount": 29000,
   "set_total_percent": 80,
+  "fixed_invest_week": 8,
   "stocks": {
     "202101": {
       "name": "南方宝元债券A",
