@@ -14,6 +14,9 @@ type AnalRes struct {
 	SetPercentSum float32
 	// 已投资金额
 	InvestedAmount float32
+	// 计划投资金额
+	ToInvestAmount float32
+	// 加仓计划
 	InvestPlans map[string] *InvestPlan
 }
 
@@ -33,14 +36,14 @@ var AnalysisResult = AnalRes{RolePercent: make(map[string] float32),
 func Analysis() {
 	buffer.StockConfigLock.Lock()
 	stocks := buffer.StockConfig.Stocks
+	AnalysisResult.ToInvestAmount = buffer.StockConfig.TotalAmount * buffer.StockConfig.SetTotalPercent / 100.0
 	for stockNum, stock := range stocks {
 		AnalysisResult.SetPercentSum += stock.SetPercent
 		AnalysisResult.RolePercent[stock.Role] += stock.SetPercent
 		AnalysisResult.InvestedAmount += stock.Amount
 		AnalysisResult.InvestPlans[stockNum] = &InvestPlan{"", 0 , 0}
 			AnalysisResult.InvestPlans[stockNum].Name = stock.Name
-		AnalysisResult.InvestPlans[stockNum].ToInvestAmount = buffer.StockConfig.TotalAmount *
-			buffer.StockConfig.SetTotalPercent / 100.0 *
+		AnalysisResult.InvestPlans[stockNum].ToInvestAmount = AnalysisResult.ToInvestAmount *
 			stock.SetPercent / 100.0 -
 			stock.Amount
 		AnalysisResult.InvestPlans[stockNum].InvestPerWeek = AnalysisResult.InvestPlans[stockNum].ToInvestAmount /
