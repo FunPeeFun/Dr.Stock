@@ -31,7 +31,7 @@
       "name": "中欧新蓝筹灵活配置混合A",
       "role": "central-forward",
       "amount": 1173.66,
-      "set_percent": 15
+      "set_percent": 10
     },
     "519066": {
       "name": "汇添富蓝筹稳健混合",
@@ -43,19 +43,19 @@
       "name": "嘉实新兴产业股票",
       "role": "forward",
       "amount": 2668.51,
-      "set_percent": 20
+      "set_percent": 15
     },
     "001875": {
       "name": "前海开源沪港深优势精选灵活配置混合A",
       "role": "forward",
       "amount": 306.49,
-      "set_percent": 5
+      "set_percent": 10
     },
     "006257": {
       "name": "信达澳银先进制造股票",
       "role": "forward",
       "amount": 4599.12,
-      "set_percent": 10
+      "set_percent": 15
     }
   }
 }

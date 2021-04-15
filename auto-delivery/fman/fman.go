@@ -29,9 +29,9 @@ func readJson(path string) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	buffer.StockConfigLock.Lock()
+	buffer.StockConfig.Lock()
 	err = json.Unmarshal(byteValue, &buffer.StockConfig)
-	buffer.StockConfigLock.Unlock()
+	buffer.StockConfig.Unlock()
 	if err != nil {
 		log.Fatal(err)
 	}

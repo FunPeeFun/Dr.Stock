@@ -3,6 +3,7 @@ package buffer
 import "sync"
 
 type Config struct {
+	sync.Mutex
 	TotalAmount float32 `json:"total_amount"`
 	SetTotalPercent float32 `json:"set_total_percent"`
 	FixedInvestWeek int32 `json:"fixed_invest_week"`
@@ -17,4 +18,3 @@ type Stock struct {
 }
 
 var StockConfig Config
-var StockConfigLock sync.Mutex

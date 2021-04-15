@@ -34,7 +34,7 @@ var AnalysisResult = AnalRes{RolePercent: make(map[string] float32),
 	InvestPlans: make(map[string] *InvestPlan)}
 
 func Analysis() {
-	buffer.StockConfigLock.Lock()
+	buffer.StockConfig.Lock()
 	stocks := buffer.StockConfig.Stocks
 	AnalysisResult.ToInvestTotalAmount = buffer.StockConfig.TotalAmount * buffer.StockConfig.SetTotalPercent / 100.0
 	for stockNum, stock := range stocks {
@@ -49,7 +49,7 @@ func Analysis() {
 		AnalysisResult.InvestPlans[stockNum].InvestPerWeek = AnalysisResult.InvestPlans[stockNum].ToInvestAmount /
 			float32(buffer.StockConfig.FixedInvestWeek)
 	}
-	buffer.StockConfigLock.Unlock()
+	buffer.StockConfig.Unlock()
 	res, err := json.MarshalIndent(AnalysisResult, "", "  ")
 	if err != nil {
 		fmt.Println(err)
